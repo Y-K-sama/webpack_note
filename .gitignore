@@ -1,8 +1,2 @@
-/chapter1_webpack_install/node_modules
-/chapter1/模块化兼容/node_modules
-/chapter1/练习/数字查找特效/node_modules
-/chapter1/编译结果分析/node_modules
-/chapter1/1-6配置文件/node_modules
-/chapter1/1-8编译过程/node_modules
-/chapter1/1-9入口和出口/node_modules
-/chapter1/1-10处理样式练习/node_modules
+node_modules
+dist
