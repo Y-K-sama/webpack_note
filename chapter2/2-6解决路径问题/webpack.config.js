@@ -3,14 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
     output: {
-        filename: '[name].[chunkhash:5].js'
+        filename: 'js/[name].[chunkhash:5].js'
     },
-    module:{
-        rules:[
+    entry:{
+        index: './src/js/index.js'
+    },
+    module: {
+        rules: [
             {
-                test:/\.(png)|(gif)|(jpg)$/, //匹配以png，gif，jpg结尾的文件
-                // use: ['file-loader']
-                use:['url-loader']
+                test: /\.(png)|(jpg)|(gif)$/,
+                use: ['url-loader']
             }
         ]
     },
@@ -18,11 +20,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './public/index.html',
-            filename: 'index.html'
+            filename: 'html/index.html'
         })
-    ],
-    devServer: {
-        open: true
-    }
-
+    ]
 }
